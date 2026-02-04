@@ -1,0 +1,199 @@
+/* ============================
+   GLOBAL CYBERPUNK THEME
+============================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #02040a;
+    color: #e0ffff;
+    overflow-x: hidden;
+}
+
+.glow-text {
+    color: cyan;
+    text-shadow: 0 0 25px cyan;
+}
+
+.neon-border {
+    border-bottom: 3px solid cyan;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+/* ============================
+        NAVBAR
+============================ */
+.glass-nav {
+    background: rgba(0, 0, 20, 0.45);
+    border-bottom: 1px solid cyan;
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: cyan;
+    text-shadow: 0 0 15px cyan;
+}
+
+/* ============================
+      PROJECTS SECTION
+============================ */
+.projects-section {
+    padding: 100px 40px;
+    position: relative;
+}
+
+#three-bg-projects {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.projects-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* ============================
+      PROJECT CARDS
+============================ */
+.cyber-card {
+    padding: 25px;
+    border: 1px solid cyan;
+    border-radius: 12px;
+    background: rgba(0, 10, 20, 0.5);
+    backdrop-filter: blur(10px);
+    transition: 0.35s;
+    text-align: center;
+}
+
+.project-hover:hover {
+    box-shadow: 0 0 35px cyan;
+    transform: translateY(-8px);
+}
+
+/* Floating 3D Icon Placeholder */
+.project-3d-icon {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+/* CSS 3D cube animation */
+.cube-3d {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border: 2px solid cyan;
+    animation: rotateCube 5s linear infinite;
+}
+
+@keyframes rotateCube {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Buttons */
+.btn-secondary {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: 1px solid cyan;
+    color: cyan;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.neon-btn:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 20px cyan;
+}
+
+/* ============================
+        RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+    .navbar { padding: 20px; }
+
+    .projects-section { padding: 60px 20px; }
+
+    .logo { font-size: 1.5rem; }
+}
+/* FIX: Enable clicking on project buttons */
+.project-card a,
+.btn-secondary,
+.neon-btn {
+    position: relative;
+    z-index: 50 !important;
+    pointer-events: auto;
+}
+
+/* FIX: Make cube not block clicks */
+.project-3d-icon,
+.cube-3d {
+    pointer-events: none !important;
+}
+/* ============================  
+        RESPONSIVE  
+============================ */
+@media (max-width: 768px) {
+    .navbar { padding: 20px; }
+    .projects-section { padding: 60px 20px; }
+    .logo { font-size: 1.5rem; }
+}
+
+/* ============================  
+   FIX: Enable clicking on buttons  
+============================ */
+.project-card a,
+.btn-secondary,
+.neon-btn {
+    position: relative;
+    z-index: 9999 !important;
+    pointer-events: auto;
+}
+
+.project-3d-icon,
+.cube-3d {
+    pointer-events: none !important;
+}

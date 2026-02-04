@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Cyberpunk Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR (same as homepage) -->
+  <header class="navbar">
+      <div class="logo">Sheshnath<span>Dev</span></div>
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+
+      <h2 class="contact-title">Contact Me</h2>
+
+      <div class="contact-card">
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+
+              <input type="hidden" name="access_key" value="8559a8e1-2391-4a1f-b145-5ea26e73f8a1">
+
+              <div class="input-group">
+                  <label>Your Name</label>
+                  <input type="text" name="name" required>
+              </div>
+
+              <div class="input-group">
+                  <label>Email Address</label>
+                  <input type="email" name="email" required>
+              </div>
+
+              <div class="input-group">
+                  <label>Message</label>
+                  <textarea name="message" required></textarea>
+              </div>
+
+              <button class="btn-submit" type="submit">Send Message</button>
+
+              <p class="form-status"></p>
+
+          </form>
+
+      </div>
+
+  </section>
+
+  <canvas id="cyber-grid"></canvas>
+
+</body>
+</html>
+
+

@@ -1,0 +1,196 @@
+/* ===============================
+   CONTACT PAGE - CYBERPUNK PROJECT STYLE
+   (FULL MATCH WITH YOUR PROJECT PAGE UI)
+================================= */
+
+
+/* =========================
+        NAVBAR
+========================= */
+.glass-nav {
+    background: rgba(0, 0, 20, 0.45);
+    border-bottom: 1px solid cyan;
+    backdrop-filter: blur(15px);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.logo span {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.15rem;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: cyan;
+    text-shadow: 0 0 12px cyan;
+}
+
+/* =========================
+        PAGE LAYOUT
+========================= */
+.contact-section {
+    padding: 150px 10%;
+    position: relative;
+    z-index: 3;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+    color: cyan;
+    text-shadow: 0 0 15px cyan, 0 0 40px cyan;
+}
+
+/* =========================
+       CONTACT CARD UI
+========================= */
+.contact-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 45px;
+
+    background: rgba(0, 0, 20, 0.45);
+    border: 1px solid cyan;
+    border-radius: 14px;
+    backdrop-filter: blur(18px);
+
+    box-shadow: 
+        0 0 25px #00ffff55, 
+        inset 0 0 25px #00ffff33,
+        0 0 70px #00e5ff22;
+
+    transition: 0.35s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 0 45px #00ffffaa,
+        inset 0 0 35px #00ffff66;
+}
+
+/* =========================
+        INPUT GROUP
+========================= */
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    color: cyan;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* Inputs Matching Project Page Card Style */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 16px 20px;
+
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid cyan;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+
+    box-shadow: inset 0 0 15px #00ffff44;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    box-shadow:
+        0 0 25px cyan,
+        inset 0 0 15px #00ffff55;
+    border-color: cyan;
+}
+
+textarea {
+    height: 160px;
+    resize: none;
+}
+
+/* =========================
+        BUTTON MATCH
+========================= */
+.btn-submit {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(90deg, cyan, #0bf);
+    color: black;
+
+    box-shadow: 0 0 25px cyan;
+    transition: 0.35s ease;
+}
+
+.btn-submit:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 55px cyan;
+}
+
+/* =========================
+        FORM STATUS
+========================= */
+.form-status {
+    margin-top: 15px;
+    font-size: 1.15rem;
+    text-align: center;
+    color: cyan;
+    text-shadow: 0 0 12px cyan;
+}
+
+/* =========================
+        RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 28px;
+    }
+
+    .contact-title {
+        font-size: 2.3rem;
+    }
+
+    .navbar {
+        padding: 18px 30px;
+    }
+}
+

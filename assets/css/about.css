@@ -1,0 +1,351 @@
+/* ============================
+   GLOBAL CYBERPUNK THEME
+============================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #02040a;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ============================
+        NAVBAR
+============================ */
+
+.glass-nav {
+    background: rgba(0, 0, 20, 0.45);
+    border-bottom: 1px solid cyan;
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: cyan;
+    text-shadow: 0 0 15px cyan;
+}
+
+/* ============================
+        ABOUT SECTION
+============================ */
+
+.about-section {
+    padding: 120px 20px;
+    position: relative;
+}
+
+#three-bg-about {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+/* HOLOGRAM CONTENT BOX */
+
+.holo-box {
+    max-width: 950px;
+    margin: auto;
+    padding: 40px;
+    background: rgba(0, 10, 20, 0.55);
+    border: 1px solid cyan;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.3);
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.glow-text {
+    color: cyan;
+    text-shadow: 0 0 25px cyan;
+}
+
+.neon-border {
+    border-bottom: 3px solid cyan;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 8px;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 25px;
+    line-height: 1.8;
+    color: #d9ffff;
+}
+
+.cyber-highlight {
+    color: #00f6ff;
+    text-shadow: 0 0 12px #00f6ff;
+}
+
+/* Fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================
+  HOLOGRAM PHOTO WRAPPER
+============================ */
+
+.holo-photo-wrapper {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto 40px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 30px cyan, 0 0 60px #00f0ff inset;
+    animation: floatMe 5s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+.holo-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: brightness(1.15) contrast(1.05);
+}
+
+@keyframes floatMe {
+    0%,100% { transform: translateY(0px) rotateY(0deg);}
+    50% { transform: translateY(-18px) rotateY(14deg);}
+}
+
+/* GRID BACKGROUND */
+.holo-grid {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        0deg, rgba(0,255,255,0.08) 0px, rgba(0,255,255,0.08) 1px, transparent 3px
+    ),
+    repeating-linear-gradient(
+        90deg, rgba(0,255,255,0.08) 0px, rgba(0,255,255,0.08) 1px, transparent 3px
+    );
+    z-index: 1;
+    animation: gridMove 7s linear infinite;
+}
+
+@keyframes gridMove {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-50px); }
+}
+
+/* SCANNING LASER */
+.scanner-line {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, transparent, cyan, transparent);
+    z-index: 2;
+    opacity: 0.8;
+    animation: scanMove 3s linear infinite;
+}
+
+@keyframes scanMove {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+/* GLASS REFLECTION */
+.glass-reflection {
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.25), transparent);
+    transform: skewX(-20deg);
+    z-index: 3;
+    animation: glassSweep 5s ease-in-out infinite;
+}
+
+@keyframes glassSweep {
+    0% { left: -40%; }
+    50% { left: 120%; }
+    100% { left: -40%; }
+}
+
+/* NAME TAG */
+.name-tag {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+    color: cyan;
+    text-shadow: 0 0 12px cyan;
+}
+
+/* ============================
+  3D CERTIFICATE CAROUSEL
+============================ */
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.carousel {
+    display: flex;
+    gap: 30px;
+    animation: slideCerts 20s linear infinite;
+}
+
+.carousel img {
+    width: 260px;
+    border-radius: 10px;
+    border: 2px solid cyan;
+    box-shadow: 0 0 25px cyan;
+}
+
+@keyframes slideCerts {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-60%); }
+}
+
+/* ============================
+        TIMELINE
+============================ */
+
+.timeline {
+    margin-top: 50px;
+    border-left: 2px solid cyan;
+    padding-left: 25px;
+}
+
+.timeline-item {
+    margin: 25px 0;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: cyan;
+    border-radius: 50%;
+    position: absolute;
+    left: -32px;
+    top: 3px;
+    box-shadow: 0 0 10px cyan;
+}
+
+.timeline-year {
+    font-size: 1.5rem;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* ============================
+     EDUCATION BOX
+============================ */
+
+.education-box {
+    margin-top: 40px;
+    padding: 20px;
+    border: 2px solid cyan;
+    border-radius: 16px;
+    background: rgba(0,30,40,0.45);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 25px cyan;
+}
+
+.edu-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.edu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.edu-list li {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: cyan;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 8px cyan;
+}
+
+/* ============================
+        RESPONSIVE
+============================ */
+
+@media (max-width: 768px) {
+
+    .section-title {
+        font-size: 2.3rem;
+    }
+
+    .holo-photo-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .carousel img {
+        width: 180px;
+    }
+}
